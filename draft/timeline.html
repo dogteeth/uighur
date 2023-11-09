@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #2e364a;
+      }
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 100px auto;
+      }
+
+      .timeline-container {
+        padding: 10px 50px;
+        position: relative;
+        width: 50%;
+      }
+
+      .text-box {
+        padding: 20px 30px;
+        background: #fff;
+        position: relative;
+        border-radius: 6px;
+        font-size: 15px;
+      }
+
+      .left-container {
+        left: 0;
+      }
+      .right-container {
+        left: 50%;
+      }
+      .timeline_icon {
+        background-color: white;
+        position: absolute;
+        width: 40px;
+        border-radius: 50%;
+        right: -20px;
+        top: 32px;
+        z-index: 10;
+      }
+      .right-container .timeline_icon {
+        left: -20px;
+      }
+
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        background: #fff;
+        top: 0;
+        left: 50%;
+        margin-left: -3px;
+        z-index: -1;
+        animation: moveline 6s linear forwards;
+      }
+
+      @keyframes moveline {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: 100%;
+        }
+      }
+
+      .left-container-arrow {
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: 28px;
+        z-index: 1;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid #fff;
+        right: -15px;
+      }
+      .right-container-arrow {
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: 28px;
+        z-index: 1;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid #fff;
+        left: -15px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .timeline {
+          margin: 50px auto;
+        }
+        .timeline::after {
+          left: 31px;
+        }
+
+        .timeline-container {
+          width: 100%;
+          padding-left: 80px;
+          padding-right: 25px;
+        }
+        .text-box {
+          font-size: 13px;
+        }
+        .right-container {
+          left: 0;
+        }
+
+        .timeline_icon,
+        .right-container .timeline_icon {
+          left: 10px;
+        }
+
+        .left-container-arrow,
+        .right-container-arrow {
+          border-right: 15px solid #fff;
+          border-left: 0;
+          left: -15px;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="timeline">
+      <!-- 1 -->
+      <div class="timeline-container left-container">
+        <img
+          src="../src/img/facebook-messenger.png"
+          alt=""
+          class="timeline_icon"
+        />
+        <div class="text-box">
+          <h2>1 Lorem, ipsum.</h2>
+          <small>Dolor sit amet.</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur in
+            quos, molestias dolorem voluptatibus ut sequi perspiciatis hic
+            ratione vero? Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Asperiores, quae.
+          </p>
+          <span class="left-container-arrow"> </span>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="timeline-container right-container">
+        <img
+          src="../src/img/facebook-messenger.png"
+          alt=""
+          class="timeline_icon"
+        />
+        <div class="text-box">
+          <h2>2 Lorem, ipsum.</h2>
+          <small>Dolor sit amet.</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur in
+            quos, molestias dolorem voluptatibus ut sequi perspiciatis hic
+            ratione vero?
+          </p>
+          <span class="right-container-arrow"> </span>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="timeline-container left-container">
+        <img
+          src="../src/img/facebook-messenger.png"
+          alt=""
+          class="timeline_icon"
+        />
+        <div class="text-box">
+          <h2>3 Lorem, ipsum.</h2>
+          <small>Dolor sit amet.</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur in
+            quos, molestias dolorem voluptatibus ut sequi perspiciatis hic
+            ratione vero?
+          </p>
+          <span class="left-container-arrow"> </span>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="timeline-container right-container">
+        <img
+          src="../src/img/facebook-messenger.png"
+          alt=""
+          class="timeline_icon"
+        />
+        <div class="text-box">
+          <h2>4 Lorem, ipsum.</h2>
+          <small>Dolor sit amet.</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur in
+            quos, molestias dolorem voluptatibus ut sequi perspiciatis hic
+            ratione vero? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Sunt inventore necessitatibus earum veniam maxime sit ullam
+            quia laudantium. Harum, enim?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            tempora dolorum et saepe esse ab impedit eaque, similique modi
+            voluptatibus.
+          </p>
+          <span class="right-container-arrow"> </span>
+        </div>
+      </div>
+      <!-- 5 -->
+
+      <div class="timeline-container left-container">
+        <img
+          src="../src/img/facebook-messenger.png"
+          alt=""
+          class="timeline_icon"
+        />
+        <div class="text-box">
+          <h2>5 Lorem, ipsum.</h2>
+          <small>Dolor sit amet.</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur in
+            quos, molestias dolorem voluptatibus ut sequi perspiciatis hic
+            ratione vero?
+          </p>
+          <span class="left-container-arrow"> </span>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="timeline-container right-container">
+        <img
+          src="../src/img/facebook-messenger.png"
+          alt=""
+          class="timeline_icon"
+        />
+        <div class="text-box">
+          <h2>6 Lorem, ipsum.</h2>
+          <small>Dolor sit amet.</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur in
+            quos, molestias dolorem voluptatibus ut sequi perspiciatis hic
+            ratione vero?
+          </p>
+          <span class="right-container-arrow"> </span>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="timeline-container left-container">
+        <img
+          src="../src/img/facebook-messenger.png"
+          alt=""
+          class="timeline_icon"
+        />
+        <div class="text-box">
+          <h2>7 Lorem, ipsum.</h2>
+          <small>Dolor sit amet.</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur in
+            quos, molestias dolorem voluptatibus ut sequi perspiciatis hic
+            ratione vero?
+          </p>
+          <span class="left-container-arrow"> </span>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="timeline-container right-container">
+        <img
+          src="../src/img/facebook-messenger.png"
+          alt=""
+          class="timeline_icon"
+        />
+        <div class="text-box">
+          <h2>8 Lorem, ipsum.</h2>
+          <small>Dolor sit amet.</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur in
+            quos, molestias dolorem voluptatibus ut sequi perspiciatis hic
+            ratione vero?
+          </p>
+          <span class="right-container-arrow"> </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

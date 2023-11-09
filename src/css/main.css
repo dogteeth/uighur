@@ -1,0 +1,750 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fontCompleteWhite: white;
+  --fontWhite: rgb(255, 255, 255, 0.6);
+  --fontRed: rgb(255, 51, 51);
+}
+
+body {
+  background-color: black;
+  color: rgb(255, 255, 255, 0.6);
+}
+
+/* *** */
+/* font-size 設定 */
+h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+h3 {
+  font-size: 2rem;
+  color: white;
+}
+p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  text-align: justify;
+}
+
+/* *** */
+/* 強調字體 設定 */
+
+em {
+  font-style: normal;
+}
+.textEmphasized {
+  color: white;
+}
+.textBold {
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: underline;
+}
+.sourceLink {
+  white-space: nowrap;
+}
+.textLink {
+  color: rgba(137, 137, 137, 1);
+  white-space: nowrap;
+}
+.textLink:visited {
+  color: rgba(137, 137, 137, 1);
+}
+
+a:visited {
+  color: black;
+}
+
+/* *** */
+/* 游標設計 */
+.cursor {
+  position: fixed;
+  width: 8rem;
+  height: 8rem;
+  margin-left: -1.5rem;
+  margin-top: -1.5rem;
+  pointer-events: none;
+  z-index: 1000;
+}
+.grow {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 5px black;
+  background-color: white;
+  mix-blend-mode: difference;
+}
+/* *** */
+/* 間格線設計  */
+.divider {
+  width: 80%;
+  height: 0.2rem;
+  margin: 2rem auto;
+  background-color: white;
+}
+
+.divider_blank {
+  width: 80%;
+  height: 0.2rem;
+  margin: 2rem auto;
+}
+
+/* *** */
+/* quotation 設計 */
+.quotationBlock {
+  width: 60%;
+  margin: 2rem auto;
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.quotation {
+  font-size: 1.5rem;
+  text-align: justify;
+  quotes: "\201c""\201d";
+  position: relative;
+  padding-left: 40px;
+  &::before {
+    content: open-quote;
+    font-size: 4em;
+    color: var(--fontRed);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-family: Georgia, serif;
+  }
+  &::after {
+    content: close-quote;
+    font-size: 4em;
+    color: red;
+    position: absolute;
+    bottom: -5rem;
+    font-family: Georgia, serif;
+  }
+}
+
+.quotationBlock.smallBlock {
+  padding: 2rem 2rem rem 1rem;
+  width: 100%;
+}
+.quotationBlock.smallBlock .quotation {
+  font-size: 1.2rem;
+}
+
+/* *** */
+/* 主視覺 */
+.mainBanner {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.mainFace {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48%, -0%);
+}
+.chinaFlag {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.mainTitle {
+  /* color: white; */
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.mainTitle h1 {
+  color: rgb(255, 51, 51);
+  font-size: 6rem;
+  white-space: nowrap;
+}
+.mainTitle h2 {
+  font-size: 2.5rem;
+  margin-top: -1rem;
+}
+.mainTitle h3 {
+  font-size: 2rem;
+  margin-bottom: -1rem;
+}
+/*  */
+
+/* ***** */
+/* topic content design */
+.topicContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: flex-start;
+  gap: 1.5rem;
+}
+.topWebSources {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*  */
+/* video設計 */
+.videosContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  /* height: 100vh; */
+  gap: 1rem;
+}
+
+.videoContent {
+  background-color: rgb(128, 128, 128, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  z-index: 2;
+}
+/* videoContainer set up */
+.videoContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(1);
+}
+.player {
+  aspect-ratio: 16/9;
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.videoText {
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: justify;
+  color: black;
+  background-color: rgb(206, 202, 202, 0.8);
+  padding: 1rem;
+  box-shadow: 0px 2px 2px black;
+}
+
+/* ***** */
+/* section 01 */
+/* 現況 */
+.uyghurNow {
+  width: 80%;
+  margin: auto;
+}
+
+.countriesStandOut {
+  width: 70%;
+  margin: auto;
+  padding: 1rem;
+}
+.countriesStandOut h2 {
+  text-align: center;
+}
+
+.countriesList {
+  column-count: 2;
+  column-gap: 1rem;
+}
+
+.countryContent {
+  background-color: rgb(128, 128, 128, 0.7);
+  padding: 2rem;
+  display: inline-block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* *** */
+/* part II- 為什麼會針對維吾爾人 */
+.uyghur_lost_people {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.lost_people_title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 5rem;
+  color: white;
+  white-space: nowrap;
+}
+
+/* 負片效果IMG*/
+.people_invert {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+/* 負片效果說明文字 */
+.lost_people_notice {
+  width: 30%;
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  padding: 1rem;
+  border: solid 5px white;
+  background-color: grey;
+  opacity: 0;
+}
+
+/* 內文區 */
+.targetUyghurWhy {
+  padding-top: 3rem;
+  margin: auto;
+  width: 80%;
+  color: white;
+}
+
+/* .uyghurFaces {
+  border: solid 5px red;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/uyghur_manyFaces.jpg);
+  background-size: cover;
+  background-position: center;
+} */
+
+/* *** */
+/* 時間表設計 */
+.uyghurTimeline {
+  margin: auto;
+  width: 80%;
+}
+
+.uyghurTimeline_title {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.timeline-container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+
+.text-box {
+  color: black;
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+}
+
+.text-box h3 {
+  color: black;
+  font-size: 1.5rem;
+}
+.text-box p {
+  color: black;
+  font-size: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.left-container {
+  left: 0;
+}
+.right-container {
+  left: 50%;
+}
+.timeline_icon {
+  background-color: white;
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
+}
+.right-container .timeline_icon {
+  left: -20px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: -15px;
+}
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -15px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline {
+    margin: 50px auto;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .text-box {
+    font-size: 13px;
+  }
+  .right-container {
+    left: 0;
+  }
+
+  .timeline_icon,
+  .right-container .timeline_icon {
+    left: 10px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
+  }
+}
+
+/* *** */
+/* 四個重要人物  */
+.politicsFaces {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  margin: auto;
+  gap: 1rem;
+}
+
+.uyghurPolitics_title {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+.politicsFace {
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+}
+.politicsFace:hover .politicsFace_title {
+  background-color: rgb(0, 0, 0);
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
+}
+
+.politicsFace_title {
+  position: absolute;
+  color: white;
+  writing-mode: vertical-lr;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  white-space: nowrap;
+  background-color: black;
+  /* background-color: rgb(128, 128, 128, 0.6); */
+
+  padding: 1rem;
+}
+.mainImgText {
+  position: absolute;
+  color: white;
+  background-color: rgb(128, 128, 128, 0.8);
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+}
+
+.politicsFace img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* *** */
+/* 兩次獨立運動 */
+.uyghurIndependence {
+  width: 80%;
+  margin: auto;
+}
+.uyghurIndependence_title {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+}
+.uyghurCountries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.uyghurCountry {
+  display: flex;
+  flex-direction: column;
+}
+
+.uyghurCountry img {
+  width: 100%;
+  border: solid 0.2rem white;
+  filter: grayscale(1) invert();
+}
+
+.uyghurCountry img:hover {
+  filter: grayscale(0) invert(0);
+}
+/* *** */
+/* 幫助維吾爾人的三個方法 */
+.helpUyghurBanner {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 可蘭經背景圖 */
+.koran_text_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.helpUyghur_title {
+  color: white;
+  font-size: 5rem;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  opacity: 0;
+}
+.shadowFace {
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  filter: drop-shadow(0px -10px 10px rgb(255, 255, 255, 0.3));
+}
+
+/* .helpUyghur {
+  width: 100%;
+  height: 100vh;
+} */
+
+/* 如何幫助維吾爾人 */
+.helpUyghurDiv {
+  margin: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.helpingNum {
+  font-size: 12rem;
+  margin-top: -3.5rem;
+  text-align: center;
+  color: white;
+}
+
+.helpUyghurBySharing .helpingNum {
+  order: 2;
+}
+
+/*  */
+/* ****** */
+/* 圖書推薦 */
+.booksRecommendations {
+  margin: auto;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0rem;
+}
+
+.bookContent img {
+  display: block;
+  margin: auto;
+  filter: grayscale(1);
+}
+
+.bookContent img:hover {
+  filter: grayscale(0.7);
+}
+
+.bookContent p {
+  margin: 1rem 2rem;
+}
+/*  */
+
+.helpUyghurByReading,
+.helpUyghurBySharing,
+.helpUyghurByDonating {
+  margin-top: 4rem;
+}
+
+.uyghurPrisoner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.uyghurFace_new {
+  position: absolute;
+  bottom: 0%;
+  right: 50%;
+  transform: translate(50%, 0%);
+}
+.uyghurFace_new_2 {
+  position: absolute;
+  bottom: 0%;
+  right: 50%;
+  transform: translate(50%, 0%);
+  opacity: 1;
+}
+.uyghurFace_crime_content {
+  width: 100%;
+}
+.uyghurFace_crime_content p {
+  margin: auto;
+  padding: 3rem 1rem 5rem 2rem;
+  width: 50%;
+  color: white;
+  text-align: justify;
+}
+
+/* 後記 */
+
+.flowersForUyghur {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/uyghur_gunman_flower.jpg);
+
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.someThoughts {
+  padding-top: 3rem;
+  margin: auto;
+  width: 60%;
+}
+
+.unoBookContainer {
+  width: 80%;
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.7);
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+}
+
+.unoBookContainer img {
+  width: 200px;
+  height: 100%;
+  object-fit: contain;
+}
+.bookTextContent {
+  order: -1;
+}
+.genocides {
+  padding-top: 2rem;
+  margin: auto;
+  width: 60%;
+}
+
+.genocideContent h3 {
+  margin-top: 1rem;
+}
+.genocideContent p {
+  margin-top: 0.5rem;
+}
+.genocidesList {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.genocide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.genocide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  filter: grayscale(1);
+}
+.genocide img:hover {
+  filter: grayscale(0.8);
+  border: 0.2rem solid white;
+}

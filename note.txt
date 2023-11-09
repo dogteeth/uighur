@@ -1,0 +1,10 @@
+
+font size 
+h1: 6rem
+h2: 3rem;
+h3:
+p: 1.2rem;
+
+desktop:
+主要文字單元
+width: 80%
