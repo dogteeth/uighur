@@ -28,9 +28,9 @@ gsap.to(".chinaFlag", {
 
 gsap.to(".mainTitle", {
   scrollTrigger: {
-    trigger: ".uyghurNow",
-    start: "top 90%",
-    end: "top 80%",
+    trigger: ".mainTitle",
+    start: "top 40%",
+    end: "top 30%",
     scrub: 1,
     // markers: { fontSize: "2rem" },
   },
