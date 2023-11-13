@@ -1,75 +1,497 @@
-.mainBanner {
+body {
+  border: solid 5px red;
+}
+
+.mobileBR {
   display: none;
 }
+
+.gummanDiv {
+  display: none;
+}
+
+/* *** */
+/* 間格線設計  */
 .divider {
-  display: none;
+  width: 90%;
+  height: 0.2rem;
+  margin: 2rem auto;
+  background-color: white;
 }
 
-.uyghurNow {
-  display: none;
+.divider_blank {
+  width: 90%;
+  height: 0.2rem;
+  margin: 2rem auto;
 }
 
+/* *** */
+/* quotation 設計 */
 .quotationBlock {
-  display: none;
+  width: 60%;
+  margin: 2rem auto;
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.quotation {
+  font-size: 1.5rem;
+  text-align: justify;
+  quotes: "\201c""\201d";
+  position: relative;
+  padding-left: 40px;
+  &::before {
+    content: open-quote;
+    font-size: 4em;
+    color: var(--fontRed);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-family: Georgia, serif;
+  }
+  &::after {
+    content: close-quote;
+    font-size: 4em;
+    color: red;
+    position: absolute;
+    bottom: -5rem;
+    font-family: Georgia, serif;
+  }
+}
+
+.quotationBlock.smallBlock {
+  padding: 2rem 2rem rem 1rem;
+  width: 100%;
+}
+.quotationBlock.smallBlock .quotation {
+  font-size: 1.2rem;
+}
+
+/* *** */
+/* 主視覺 */
+.mainBanner {
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  max-height: 1080px;
+
+  /* background-color: black; */
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.mainFace {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48%, -0%);
+}
+.chinaFlag {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.mainTitle {
+  /* color: white; */
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.mainTitle h1 {
+  color: rgb(255, 51, 51);
+  font-size: 6rem;
+  white-space: nowrap;
+}
+.mainTitle h2 {
+  font-size: 2.5rem;
+  margin-top: -1rem;
+}
+.mainTitle h3 {
+  font-size: 2rem;
+  margin-bottom: -1rem;
+}
+/*  */
+
+/* ***** */
+/* section 01 */
+/* 現況 */
+.uyghurNow {
+  width: 90%;
+  margin: auto;
 }
 
 .countriesStandOut {
-  display: none;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+.countriesStandOut h2 {
+  text-align: center;
 }
 
+.countriesList {
+  column-count: 2;
+  column-gap: 1rem;
+}
+
+.countryContent {
+  background-color: rgb(128, 128, 128, 0.7);
+  padding: 2rem;
+  display: inline-block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* *** */
+/* part II- 為什麼會針對維吾爾人 */
 .uyghur_lost_people {
-  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
+
+.lost_people_title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 5rem;
+  color: white;
+  white-space: nowrap;
+}
+
+/* 負片效果IMG*/
+.people_invert {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+/* 負片效果說明文字 */
+.lost_people_notice {
+  width: 30%;
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  padding: 1rem;
+  border: solid 5px white;
+  background-color: grey;
+  opacity: 0;
+}
+
+/* 內文區 */
 .targetUyghurWhy {
-  display: none;
+  padding-top: 3rem;
+  margin: auto;
+  width: 90%;
+  color: white;
 }
 
+/* 時間表 */
 .uyghurTimeline {
-  display: none;
+  margin: auto;
+  width: 80%;
 }
+
+.uyghurTimeline_title {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* *** */
+/* 四個重要人物  */
+.politicsFaces {
+  width: 100%;
+  height: 100vh;
+  min-height: 768px;
+  display: flex;
+  margin: auto;
+  gap: 1rem;
+}
+
+.uyghurPolitics_title {
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+.politicsFace {
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+}
+.politicsFace:hover .politicsFace_title {
+  background-color: rgb(0, 0, 0);
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
+}
+
+.politicsFace_title {
+  position: absolute;
+  color: white;
+  writing-mode: vertical-lr;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  white-space: nowrap;
+  background-color: black;
+  /* background-color: rgb(128, 128, 128, 0.6); */
+
+  padding: 1rem;
+}
+.mainImgText {
+  position: absolute;
+  color: white;
+  background-color: rgb(128, 128, 128, 0.8);
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+}
+
+.politicsFace img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* *** */
+/* 兩次獨立運動 */
 .uyghurIndependence {
-  display: none;
+  width: 90%;
+  margin: auto;
+}
+.uyghurIndependence_title {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+}
+.uyghurCountries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
-.uyghurPolitics {
-  display: none;
+.uyghurCountry {
+  display: flex;
+  flex-direction: column;
 }
 
+.uyghurCountry img {
+  width: 100%;
+  border: solid 0.2rem white;
+  filter: grayscale(1) invert();
+}
+
+.uyghurCountry img:hover {
+  filter: grayscale(0) invert(0);
+}
+/* *** */
+/* 幫助維吾爾人的三個方法 */
 .helpUyghurBanner {
-  display: none;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
+/* 可蘭經背景圖 */
+.koran_text_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.helpUyghur_title {
+  color: white;
+  font-size: 5rem;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  opacity: 0;
+}
+.shadowFace {
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  filter: drop-shadow(0px -10px 10px rgb(255, 255, 255, 0.3));
+}
+
+/* 如何幫助維吾爾人 */
 .helpUyghurDiv {
-  display: none;
-}
-.helpUyghurByReading {
-  display: none;
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
+.helpingNum {
+  font-size: 12rem;
+  margin-top: -3.5rem;
+  text-align: center;
+  color: white;
+}
+
+.helpUyghurBySharing .helpingNum {
+  order: 2;
+}
+
+/*  */
+/* ****** */
+/* 圖書推薦 */
 .booksRecommendations {
-  display: none;
+  margin: auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0rem;
 }
 
-.helpUyghurBySharing {
-  display: none;
+.bookContent img {
+  display: block;
+  margin: auto;
+  filter: grayscale(1);
 }
 
+.bookContent img:hover {
+  filter: grayscale(0.7);
+}
+
+.bookContent p {
+  margin: 1rem 2rem;
+}
+/*  */
+
+.helpUyghurByReading,
+.helpUyghurBySharing,
 .helpUyghurByDonating {
-  display: none;
+  margin-top: 4rem;
 }
+
 .uyghurPrisoner {
-  display: none;
+  width: 100%;
+  height: 100vh;
+  /* min-height: 650px;
+    max-height: 1080px; */
+  position: relative;
+  overflow: hidden;
+}
+
+.uyghurFace_new {
+  position: absolute;
+  bottom: 0%;
+  right: 50%;
+  transform: translate(50%, 0%);
+}
+.uyghurFace_new_2 {
+  position: absolute;
+  bottom: 0%;
+  right: 50%;
+  transform: translate(50%, 0%);
+  opacity: 1;
 }
 .uyghurFace_crime_content {
-  display: none;
+  width: 100%;
 }
+.uyghurFace_crime_content p {
+  margin: auto;
+  padding: 3rem 1rem 5rem 2rem;
+  width: 50%;
+  color: white;
+  text-align: justify;
+}
+
+/* 後記 */
 .flowersForUyghur {
-  display: none;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  max-height: 1080px;
+  background-image: url(../img/uyghur_gunman_flower.jpg);
+
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
 .someThoughts {
-  display: none;
+  padding-top: 3rem;
+  margin: auto;
+  width: 70%;
+}
+
+.unoBookContainer {
+  width: 100%;
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.7);
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+}
+
+.unoBookContainer img {
+  width: 200px;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+}
+
+.unoBookContainer img:hover {
+  filter: grayscale(0.7);
+}
+.bookTextContent {
+  order: -1;
 }
 .genocides {
-  display: none;
+  padding-top: 2rem;
+  margin: auto;
+  width: 70%;
+}
+
+.genocideContent h3 {
+  margin-top: 1rem;
+}
+.genocideContent p {
+  margin-top: 0.5rem;
+}
+.genocidesList {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.genocide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.genocide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  filter: grayscale(1);
+}
+.genocide img:hover {
+  filter: grayscale(0.8);
+  border: 0.2rem solid white;
 }

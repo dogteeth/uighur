@@ -144,9 +144,9 @@ mm.add("(max-width: 768px)", () => {
 
   gsap.to(".chinaFlag", {
     scrollTrigger: {
-      trigger: ".mainFace",
-      start: "bottom 100%",
-      end: "bottom 90%",
+      trigger: ".mainTitle",
+      start: "top 30%",
+      end: "top 20%",
       scrub: 1,
       // markers: { fontSize: "2rem" },
     },
@@ -177,7 +177,7 @@ mm.add("(min-width: 769px)", () => {
       start: "top 5%",
       end: "top 0%",
       // scrub: 1,
-      markers: { fontSize: "2rem" },
+      // markers: { fontSize: "2rem" },
       toggleActions: "play none reverse none",
     },
     duration: 0.5,

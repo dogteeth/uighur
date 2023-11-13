@@ -2,6 +2,10 @@
   display: none;
 }
 
+.gummanDiv {
+  display: none;
+}
+
 /* *** */
 /* 間格線設計  */
 .divider {
@@ -421,6 +425,7 @@
   background-position: center top;
   background-attachment: fixed;
 }
+
 .someThoughts {
   padding-top: 3rem;
   margin: auto;
@@ -439,6 +444,11 @@
   width: 200px;
   height: 100%;
   object-fit: contain;
+  filter: grayscale(1);
+}
+
+.unoBookContainer img:hover {
+  filter: grayscale(0.7);
 }
 .bookTextContent {
   order: -1;
