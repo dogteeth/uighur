@@ -1,42 +1,5 @@
 // 主視覺動畫
 gsap.registerPlugin(ScrollTrigger);
-gsap.to(".mainFace", {
-  scrollTrigger: {
-    trigger: ".uyghurNow",
-    start: "top 100%",
-    end: "top 70%",
-    scrub: 1,
-    // markers: { fontSize: "2rem" },
-  },
-  scale: 5,
-  opacity: 0,
-  duration: 2,
-});
-
-gsap.to(".chinaFlag", {
-  scrollTrigger: {
-    trigger: ".uyghurNow",
-    start: "top 100%",
-    end: "top 80%",
-    scrub: 1,
-    // markers: { fontSize: "2rem" },
-  },
-  duration: 2,
-  opacity: 0,
-  filter: "grayscale(100%)",
-});
-
-gsap.to(".mainTitle", {
-  scrollTrigger: {
-    trigger: ".mainTitle",
-    start: "top 40%",
-    end: "top 30%",
-    scrub: 1,
-    // markers: { fontSize: "2rem" },
-  },
-  duration: 2,
-  opacity: 1,
-});
 
 //
 // 負片人群像
@@ -51,20 +14,6 @@ gsap.to(".people_invert", {
   },
   duration: 5,
   opacity: 1,
-});
-
-// 負片人群像文字
-gsap.to(".lost_people_title", {
-  scrollTrigger: {
-    trigger: ".people_invert",
-    start: "top 5%",
-    end: "top 0%",
-    // scrub: 1,
-    // markers: { fontSize: "2rem" },
-    toggleActions: "play none reverse none",
-  },
-  duration: 0.5,
-  opacity: 0,
 });
 
 // timeline animation .text-box
@@ -162,43 +111,159 @@ gsap.to(".uyghurFace_new_2", {
   opacity: 0,
 });
 
-// 四位政治人物動畫
-let expanders = gsap.utils.toArray(".expander");
-let active; // keep track of which expander is open
-expanders.forEach(function (expander, index) {
-  // let close = expander.querySelector(".close");
-  //create animation for each expander
-  let animation = gsap.timeline({ paused: true });
+let mm = gsap.matchMedia();
 
-  let mainText = expander.querySelector(".mainImgText");
-  let mainTitle = expander.querySelector(".politicsFace_title");
-
-  animation
-    .to(expander, { width: 1200, duration: 0.1 })
-    .to(mainTitle, { opacity: "0", duration: 0.5 })
-    .set(mainTitle, { display: "none" })
-    .to(mainText, { width: "95%", opacity: "1", duration: 0.1 });
-
-  // animation.from(
-  //   close,
-  //   { opacity: 0, duration: 0.1, scale: 0.4, x: "-=10" },
-  //   "-=0.1"
-  // );
-  //apply the timeline animation to an animation property on the expander
-  expander.animation = animation;
-  expander.addEventListener("click", function () {
-    if (active) {
-      //close the active expander if there is one by reversing it
-
-      active.animation.reverse();
-    }
-    expander.animation.play(); // play the animation of the element you clicked on (this opens it)
-    active = expander; // keep track of which expander is open
+// 手機版動畫
+mm.add("(max-width: 768px)", () => {
+  // 負片人群像文字
+  gsap.to(".lost_people_title", {
+    scrollTrigger: {
+      trigger: ".uyghur_lost_people",
+      start: "top 5%",
+      end: "top 0%",
+      scrub: 1,
+      // markers: { fontSize: "2rem" },
+      toggleActions: "play none reverse none",
+    },
+    duration: 0.1,
+    opacity: 0,
   });
-  //close this expander when you click the close button by reversing the animation
-  expander.addEventListener("mouseleave", function (event) {
-    event.stopPropagation();
-    expander.animation.reverse();
+
+  gsap.to(".mainFace", {
+    scrollTrigger: {
+      trigger: ".mainFace",
+      start: "bottom 100%",
+      end: "bottom 80%",
+      scrub: 1,
+      // markers: { fontSize: "2rem" },
+    },
+    scale: 5,
+    opacity: 0,
+    duration: 2,
+  });
+
+  gsap.to(".chinaFlag", {
+    scrollTrigger: {
+      trigger: ".mainFace",
+      start: "bottom 100%",
+      end: "bottom 90%",
+      scrub: 1,
+      // markers: { fontSize: "2rem" },
+    },
+    duration: 0.5,
+    opacity: 0,
+    // filter: "grayscale(100%)",
+  });
+
+  gsap.to(".mainTitle", {
+    scrollTrigger: {
+      trigger: ".mainTitle",
+      start: "bottom 100%",
+      end: "bottom 70%",
+      scrub: 1,
+      // markers: { fontSize: "2rem" },
+    },
+    duration: 2,
+    opacity: 1,
+  });
+});
+
+// 桌機版
+mm.add("(min-width: 769px)", () => {
+  // 負片人群像文字
+  gsap.to(".lost_people_title", {
+    scrollTrigger: {
+      trigger: ".lost_people_title",
+      start: "top 5%",
+      end: "top 0%",
+      // scrub: 1,
+      markers: { fontSize: "2rem" },
+      toggleActions: "play none reverse none",
+    },
+    duration: 0.5,
+    opacity: 0,
+  });
+
+  gsap.to(".mainFace", {
+    scrollTrigger: {
+      trigger: ".uyghurNow",
+      start: "top 100%",
+      end: "top 70%",
+      scrub: 1,
+      // markers: { fontSize: "2rem" },
+    },
+    scale: 5,
+    opacity: 0,
+    duration: 2,
+  });
+
+  gsap.to(".chinaFlag", {
+    scrollTrigger: {
+      trigger: ".uyghurNow",
+      start: "top 100%",
+      end: "top 80%",
+      scrub: 1,
+      // markers: { fontSize: "2rem" },
+    },
+    duration: 2,
+    opacity: 0,
+    filter: "grayscale(100%)",
+  });
+
+  gsap.to(".mainTitle", {
+    scrollTrigger: {
+      trigger: ".mainTitle",
+      start: "top 40%",
+      end: "top 30%",
+      scrub: 1,
+      // markers: { fontSize: "2rem" },
+    },
+    duration: 2,
+    opacity: 1,
+  });
+});
+
+// 四位父母官動畫，desktop的狀態才出現
+mm.add("(min-width: 1023px)", () => {
+  // this setup code only runs when viewport is at least 800px wide
+  // 四位政治人物動畫
+  let expanders = gsap.utils.toArray(".expander");
+  let active; // keep track of which expander is open
+  expanders.forEach(function (expander, index) {
+    // let close = expander.querySelector(".close");
+    //create animation for each expander
+    let animation = gsap.timeline({ paused: true });
+
+    let mainText = expander.querySelector(".mainImgText");
+    let mainTitle = expander.querySelector(".politicsFace_title");
+
+    animation
+      .to(expander, { width: 1200, duration: 0.1 })
+      .to(mainTitle, { opacity: "0", duration: 0.5 })
+      .set(mainTitle, { display: "none" })
+      .to(mainText, { width: "95%", opacity: "1", duration: 0.1 });
+
+    // animation.from(
+    //   close,
+    //   { opacity: 0, duration: 0.1, scale: 0.4, x: "-=10" },
+    //   "-=0.1"
+    // );
+    //apply the timeline animation to an animation property on the expander
+    expander.animation = animation;
+    expander.addEventListener("click", function () {
+      if (active) {
+        //close the active expander if there is one by reversing it
+
+        active.animation.reverse();
+      }
+      expander.animation.play(); // play the animation of the element you clicked on (this opens it)
+      active = expander; // keep track of which expander is open
+    });
+    //close this expander when you click the close button by reversing the animation
+    expander.addEventListener("mouseleave", function (event) {
+      event.stopPropagation();
+      expander.animation.reverse();
+    });
   });
 });
 
