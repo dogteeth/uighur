@@ -174,11 +174,11 @@ mm.add("(min-width: 769px)", () => {
   gsap.to(".lost_people_title", {
     scrollTrigger: {
       trigger: ".lost_people_title",
-      start: "top 5%",
-      end: "top 0%",
-      // scrub: 1,
+      start: "top 50%",
+      end: "top 30%",
+      scrub: 1,
       // markers: { fontSize: "2rem" },
-      toggleActions: "play none reverse none",
+      // toggleActions: "play none reverse none",
     },
     duration: 0.5,
     opacity: 0,
