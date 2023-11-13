@@ -6,6 +6,17 @@
   display: none;
 }
 
+/* 游標設計 */
+.cursor {
+  position: fixed;
+  width: 8rem;
+  height: 8rem;
+  margin-left: -1.5rem;
+  margin-top: -1.5rem;
+  pointer-events: none;
+  z-index: 1000;
+}
+
 /* *** */
 /* 間格線設計  */
 .divider {

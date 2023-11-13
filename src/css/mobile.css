@@ -2,6 +2,18 @@
 /* .scrollHorizontal {
   border: solid 5px red;
 } */
+
+/* 游標設計 */
+.cursor {
+  position: fixed;
+  width: 8rem;
+  height: 8rem;
+  /* margin-left: -1.5rem;
+  margin-top: -1.5rem; */
+  pointer-events: none;
+  z-index: 1000;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
