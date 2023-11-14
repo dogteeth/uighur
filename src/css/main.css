@@ -15,7 +15,48 @@ body {
   color: rgb(255, 255, 255, 0.6);
 }
 
-/* *** */
+/* ***** */
+/* 文字設定 */
+body {
+  font-family: sans-serif;
+}
+
+.quotation {
+  font-family: serif;
+}
+
+/* 聯結的文字顏色設定 */
+a {
+  color: var(--fontWhite);
+}
+
+a:visited {
+  color: var(--fontWhite);
+}
+
+.videoText a {
+  color: black;
+}
+
+.videoText a:visited {
+  color: black;
+}
+
+a {
+  text-decoration: underline;
+}
+.sourceLink {
+  white-space: nowrap;
+}
+
+.textLink {
+  /* color: rgba(137, 137, 137, 1); */
+  white-space: nowrap;
+}
+/* .textLink:visited {
+  color: rgba(137, 137, 137, 1);
+} */
+
 /* font-size 設定 */
 h2 {
   font-size: 3rem;
@@ -34,7 +75,6 @@ p {
   text-align: justify;
 }
 
-/* *** */
 /* 強調字體 設定 */
 
 em {
@@ -45,24 +85,6 @@ em {
 }
 .textBold {
   font-weight: bolder;
-}
-
-a {
-  text-decoration: underline;
-}
-.sourceLink {
-  white-space: nowrap;
-}
-.textLink {
-  color: rgba(137, 137, 137, 1);
-  white-space: nowrap;
-}
-.textLink:visited {
-  color: rgba(137, 137, 137, 1);
-}
-
-a:visited {
-  color: black;
 }
 
 /* *** */
