@@ -131,7 +131,7 @@
 }
 
 .quotationBlock.smallBlock {
-  padding: 2rem 2rem rem 1rem;
+  padding: 2rem 2rem 2rem 1rem;
   width: 80%;
 }
 .quotationBlock.smallBlock .quotation {
@@ -301,7 +301,6 @@
 }
 
 .helpUyghurBanner {
-  border: solid 5px red;
   width: 100%;
   min-height: 650px;
   height: 100vh;
