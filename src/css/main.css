@@ -260,7 +260,7 @@ em {
 /* topic content design */
 .topicContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.1fr 1fr;
   align-content: flex-start;
   gap: 1.5rem;
 }
@@ -297,6 +297,10 @@ em {
   align-items: center;
   justify-content: center;
   filter: grayscale(1);
+}
+
+.videoContainer:hover {
+  filter: grayscale(0.7);
 }
 .player {
   aspect-ratio: 16/9;
