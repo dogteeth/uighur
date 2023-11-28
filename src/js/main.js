@@ -71,32 +71,6 @@ gsap.to(".helpUyghur_title", {
   duration: 1,
   opacity: 1,
 });
-// lost_people_notice
-
-gsap.to(".lost_people_notice", {
-  scrollTrigger: {
-    trigger: ".lost_people_notice",
-    start: "top 70%",
-    end: "top 60%",
-    scrub: 1,
-    // markers: { fontSize: "2rem" },
-    // toggleActions: "play none reverse none",
-  },
-  duration: 1,
-  opacity: 1,
-});
-gsap.to(".lost_people_notice", {
-  scrollTrigger: {
-    trigger: ".lost_people_notice",
-    start: "top 50%",
-    end: "top 40%",
-    scrub: 1,
-    // markers: { fontSize: "2rem" },
-    // toggleActions: "play none reverse none",
-  },
-  duration: 1,
-  opacity: 0,
-});
 
 // 結尾
 gsap.to(".uyghurFace_new_2", {

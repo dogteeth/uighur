@@ -182,17 +182,6 @@
   object-fit: cover;
   opacity: 0;
 }
-/* 負片效果說明文字 */
-.lost_people_notice {
-  width: 30%;
-  position: absolute;
-  bottom: 2%;
-  right: 5%;
-  padding: 1rem;
-  border: solid 5px white;
-  background-color: grey;
-  opacity: 0;
-}
 
 /* 內文區 */
 .targetUyghurWhy {

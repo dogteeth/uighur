@@ -133,6 +133,9 @@ em {
   height: 100%;
   object-fit: cover;
 }
+.newsIcon:hover {
+  box-shadow: 2px 2px 5px black;
+}
 
 /* *** */
 /* 時間表設計 */
@@ -156,6 +159,13 @@ em {
   background: #fff;
   position: relative;
   border-radius: 6px;
+}
+.right-container .text-box {
+  border-right: 0.5rem solid red;
+}
+
+.left-container .text-box {
+  border-left: 0.5rem solid gray;
 }
 
 .text-box h3 {
@@ -222,7 +232,9 @@ em {
   border-right: 15px solid #fff;
   left: -15px;
 }
-
+.event911 {
+  background: linear-gradient(to left top, rgb(255, 0, 0) 1%, white 70%);
+}
 @media screen and (max-width: 767px) {
   .timeline {
     margin: 30px auto;
@@ -241,6 +253,11 @@ em {
   }
   .right-container {
     left: 0;
+  }
+
+  .left-container .text-box {
+    border-left: none;
+    border-right: 0.5rem solid gray;
   }
 
   .timeline_icon,
