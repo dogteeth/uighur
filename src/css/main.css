@@ -342,3 +342,11 @@ ul {
   padding-right: 1rem;
   text-align: right;
 }
+
+.someThoughts {
+  display: none;
+}
+
+.uyghurFace_crime_content a {
+  color: white;
+}
