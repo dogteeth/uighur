@@ -191,10 +191,9 @@
 }
 /* 內文區 */
 .targetUyghurWhy {
-  padding-top: 3rem;
+  padding-top: 1rem;
   margin: auto;
   width: 90%;
-  color: white;
 }
 
 .targetUyghurWhy .topicContainer {
@@ -314,8 +313,8 @@
 }
 
 .shadowFace {
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
   object-fit: contain;
   position: absolute;
   bottom: 0%;
@@ -345,6 +344,7 @@
   margin: auto;
 }
 .helpingNum {
+  /* border: solid 5px red; */
   font-size: 10rem;
   margin-bottom: -3.5rem;
   text-align: left;
@@ -359,10 +359,8 @@
   overflow-x: scroll;
 }
 
-.bookContent {
-  /* border: solid 5px red; */
-  /* width: 100%; */
-}
+/* .bookContent {
+} */
 
 .bookContent img {
   display: block;
@@ -380,16 +378,16 @@
   margin: 1rem 2rem;
 }
 
-.helpUyghurByReading,
+/* .helpUyghurByReading,
 .helpUyghurBySharing,
 .helpUyghurByDonating {
-  margin-top: 4rem;
-}
-.helpUyghurByReading {
+  margin-top: 0rem;
+} */
+/* .helpUyghurByReading {
 }
 
 .helpUyghurByDonating {
-}
+} */
 
 .uyghurPrisoner {
   width: 100%;
