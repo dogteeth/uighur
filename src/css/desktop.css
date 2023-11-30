@@ -453,7 +453,7 @@
   order: -1;
 }
 .genocides {
-  padding-top: 2rem;
+  padding-top: 5rem;
   margin: auto;
   width: 60%;
 }
@@ -489,4 +489,27 @@
 .genocide img:hover {
   filter: grayscale(0.8);
   border: 0.2rem solid white;
+}
+
+/* 商品區 */
+.promotionSection {
+  padding-top: 5rem;
+  width: 60%;
+  margin: auto;
+}
+
+.promoKeyword {
+  margin-top: 3rem;
+  display: flex;
+}
+.promoKeyword p {
+  color: white;
+}
+.promoBooksSet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+.promoBook img {
+  width: 100%;
 }
