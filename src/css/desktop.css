@@ -95,8 +95,9 @@
 }
 .chinaFlag {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
+  opacity: 0.7;
   transform: translate(-50%, -50%) scale(0.8);
 }
 
@@ -496,6 +497,7 @@
   padding-top: 5rem;
   width: 60%;
   margin: auto;
+  padding-bottom: 5rem;
 }
 
 .promoKeyword {
