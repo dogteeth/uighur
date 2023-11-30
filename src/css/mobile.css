@@ -508,3 +508,30 @@
   border: 0.2rem solid white;
   filter: grayscale(1);
 }
+
+/* 商品區 */
+.promotionSection {
+  padding-top: 5rem;
+  width: 95%;
+  margin: auto;
+}
+
+.promoKeyword {
+  margin-top: 3rem;
+  display: flex;
+}
+.promoKeyword p {
+  color: white;
+}
+.promoBooksSet {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+.promoBook img {
+  width: 100%;
+}
+
+.promoBook:nth-child(3) {
+  display: none;
+}
