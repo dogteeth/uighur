@@ -215,7 +215,7 @@
 .uyghurPolitics_title {
   text-align: center;
   font-size: 3rem;
-  padding: 2rem 0rem;
+  padding: 5rem 0rem 2rem;
 }
 .politicsFace {
   width: 25%;
@@ -268,7 +268,7 @@
 }
 .uyghurIndependence_title {
   text-align: center;
-  padding: 3rem 2rem 2rem;
+  padding: 1rem 2rem 2rem;
 }
 .uyghurCountries {
   display: grid;
@@ -290,6 +290,21 @@
 .uyghurCountry img:hover {
   filter: grayscale(0) invert(0);
 }
+
+/* 四個民反 */
+.uyghurKeyRiots {
+  width: 40%;
+  margin: auto;
+  padding-top: 5rem;
+}
+.uyghurKeyRiots h2 {
+  text-align: center;
+}
+
+.uyghurRiot {
+  padding-top: 2rem;
+}
+
 /* *** */
 /* 幫助維吾爾人的三個方法 */
 .helpUyghurBanner {
@@ -494,7 +509,7 @@
 
 /* 商品區 */
 .promotionSection {
-  padding-top: 5rem;
+  padding-top: 1rem;
   width: 60%;
   margin: auto;
   padding-bottom: 5rem;

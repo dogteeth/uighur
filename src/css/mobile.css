@@ -15,9 +15,17 @@
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 0rem;
+  background-color: white;
+  height: 0.2rem;
 }
 
+::-webkit-scrollbar-thumb {
+  background: gray;
+  /* border-radius: 100vw; */
+  border-left: 0.2rem solid white;
+  border-right: 0.2rem solid white;
+}
 .mainBanner {
   width: 100%;
   height: 100vh;
@@ -255,6 +263,30 @@
 }
 /* *** */
 
+/* 四個民反 */
+.uyghurKeyRiots {
+  width: 90%;
+  margin: auto;
+  padding-top: 5rem;
+}
+.uyghurKeyRiots h2 {
+  text-align: center;
+}
+
+.uyghurRiots {
+  gap: 2rem;
+
+  display: flex;
+  overflow-x: scroll;
+}
+
+.uyghurRiot {
+  flex: 0 0 80%;
+  padding-top: 2rem;
+}
+
+/*  */
+
 .uyghurPolitics {
   width: 90%;
   margin: auto;
@@ -271,7 +303,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 1.5rem;
   overflow-x: scroll;
 }
 
@@ -377,17 +409,6 @@
 .bookContent p {
   margin: 1rem 2rem;
 }
-
-/* .helpUyghurByReading,
-.helpUyghurBySharing,
-.helpUyghurByDonating {
-  margin-top: 0rem;
-} */
-/* .helpUyghurByReading {
-}
-
-.helpUyghurByDonating {
-} */
 
 .uyghurPrisoner {
   width: 100%;
@@ -541,5 +562,9 @@
 }
 
 .promoBook:nth-child(3) {
+  display: none;
+}
+
+.divider.promo_Divider {
   display: none;
 }

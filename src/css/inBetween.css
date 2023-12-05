@@ -294,6 +294,21 @@
 .uyghurCountry img:hover {
   filter: grayscale(0) invert(0);
 }
+
+/* 四個民反 */
+.uyghurKeyRiots {
+  width: 70%;
+  margin: auto;
+  padding-top: 5rem;
+}
+.uyghurKeyRiots h2 {
+  text-align: center;
+}
+
+.uyghurRiot {
+  padding-top: 2rem;
+}
+
 /* *** */
 /* 幫助維吾爾人的三個方法 */
 .helpUyghurBanner {
