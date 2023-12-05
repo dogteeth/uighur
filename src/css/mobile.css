@@ -237,22 +237,25 @@
   padding: 3rem 2rem 2rem;
 }
 .uyghurCountries {
-  width: 90%;
-  display: grid;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   overflow-x: scroll;
   gap: 1rem;
-  margin: auto;
+  margin: auto; */
 }
 
 .uyghurCountry {
-  width: 100%;
+  flex: 0 0 90%;
 }
 .uyghurCountry p {
   padding: 0rem 0.5rem 2rem 0.5rem;
 }
 .uyghurCountry img {
-  max-width: 500px;
+  width: 100%;
   object-fit: cover;
   border: solid 0.2rem white;
   filter: grayscale(1) invert();
